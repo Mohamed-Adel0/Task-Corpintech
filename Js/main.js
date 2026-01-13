@@ -233,6 +233,17 @@ openBtn.addEventListener("click", () => {
   tab.style.right = "2%";
   tab.style.left = "80%";
   openBtn.style.display = "none";
+  if (window.innerWidth < 993) {
+    tab.style.right = "2%";
+   tab.style.setProperty("left", "50%", "important");
+
+} 
+  if (window.innerWidth < 512) {
+   tab.style.setProperty("right", "9%", "important");
+   tab.style.setProperty("left", "6%", "important");
+
+} 
+
 });
 
 // Close Tab Functionality

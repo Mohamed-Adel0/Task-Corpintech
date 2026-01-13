@@ -76,25 +76,25 @@ startAuto();
 let itemsService =[
   {
     id :1,
-    img: "/Pictures/img5s.gif",
+    img: "Pictures/img5s.gif",
     title: "Event Coverage & Live Streaming",
     desc: "We bring your events to life, both on-site and online. Offering comprehensive coverage for conferences, exhibitions, and corporate or private events, with professional live streaming on social media platforms, delivering superior audio-visual quality."
   },
   {
     id :2,
-    img: "/Pictures/img2.jpeg",
+    img: "Pictures/img2.jpeg",
     title: "Media Production",
     desc: "We produce all types of visual content, including commercial and promotional videos, corporate films, product videos, as well as professional photography services, tailored to suit all digital platforms and marketing needs."
   },
   {
     id :3,
-    img: "/Pictures/img3.jpeg",
+    img: "Pictures/img3.jpeg",
     title: "Digital Content",
     desc: "We execute and elevate digital content with cinematic precision: Social Media Content, Reels, TikTok, Stories, YouTube & Podcast Production. "
   },
   {
     id :4,
-    img: "/Pictures/img4.jpeg",
+    img: "Pictures/img4.jpeg",
     title: "Equipment Rental",
     desc: " We provide media agencies  and content creators with state-of-the-art gear from cameras and lighting tools to professional accessories. Flexible rental options available for short-term or full-scale productions."
   },

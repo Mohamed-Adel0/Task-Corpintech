@@ -11,7 +11,7 @@ body {
 
 ::selection {
   background-color: none;
-  color: #fff;
+  color: orangered;
 }
 
 html {
@@ -110,6 +110,9 @@ header nav .dropdownMenu li {
 }
 header nav .dropBar:hover .dropdownMenu {
   display: block;
+}
+header button {
+  display: none;
 }
 
 .hero-slider {
@@ -247,10 +250,15 @@ header nav .dropBar:hover .dropdownMenu {
   cursor: pointer;
   margin: 0 5px;
   transition: 0.3s;
+  background: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: #fff;
 }
 .hero-slider .ChangeSilde button:hover {
-  background: #ababab;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.264);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .about-section {
@@ -314,7 +322,9 @@ header nav .dropBar:hover .dropdownMenu {
   height: 95%;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(219, 219, 219, 0.2862745098);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px);
 }
 .about-section .container .box-img .about-img .wrapper {
   width: 100%;
@@ -325,9 +335,6 @@ header nav .dropBar:hover .dropdownMenu {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
 }
 .about-section .container .box-img .about-img .wrapper .inner {
   --w: 100px;
@@ -534,6 +541,803 @@ header nav .dropBar:hover .dropdownMenu {
   object-fit: cover;
   object-fit: cover;
   object-position: center;
+}
+
+.clients-section {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-section .container {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-section .container .clients-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.clients-section .container .clients-content .content {
+  width: 100%;
+  height: 18%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.clients-section .container .clients-content .content h2 {
+  font-size: 36px;
+  color: #fff;
+}
+.clients-section .container .clients-content .content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+.clients-section .container .clients-content .clients-logos {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-section .container .clients-content .clients-logos button {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  border: none;
+}
+.clients-section .container .clients-content .clients-logos button:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.clients-section .container .clients-content .clients-logos button:first-child {
+  left: -22px;
+}
+.clients-section .container .clients-content .clients-logos button:last-child {
+  right: -22px;
+}
+.clients-section .container .clients-content .clients-logos .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.3333333333% - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.clients-section .container .clients-content .clients-logos .carousel::-webkit-scrollbar {
+  display: none;
+}
+.clients-section .container .clients-content .clients-logos .carousel.no-transition {
+  scroll-behavior: auto;
+}
+.clients-section .container .clients-content .clients-logos .carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.clients-section .container .clients-content .clients-logos .carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.clients-section .container .clients-content .clients-logos .carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-section .container .clients-content .clients-logos .carousel .card {
+  scroll-snap-align: start;
+  height: 400px;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.09);
+  -webkit-backdrop-filter: blur(5px);
+  cursor: pointer;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.clients-section .container .clients-content .clients-logos .carousel .card .img {
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+  margin-bottom: 30px !important;
+}
+.clients-section .container .clients-content .clients-logos .card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.clients-section .container .clients-content .clients-logos .carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  color: #fff;
+}
+.clients-section .container .clients-content .clients-logos .carousel .card p {
+  color: #b5b5b5;
+  font-size: 15px;
+  width: 80%;
+  text-align: center;
+}
+.clients-section .container .clients-content .clients-logos .carousel .card:hover {
+  scale: 1.01;
+  transition: 0.5s;
+}
+
+.providers-section {
+  width: 100%;
+  height: 110vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.providers-section .container {
+  width: 98%;
+  height: 100%;
+  position: relative;
+}
+.providers-section .container .providers-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.providers-section .container .providers-content .content {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.providers-section .container .providers-content .content h2 {
+  font-size: 36px;
+  color: #fff;
+}
+.providers-section .container .providers-content .content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+.providers-section .container .providers-content .clients-logos {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.providers-section .container .providers-content .clients-logos button {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  border: none;
+  z-index: 100;
+}
+.providers-section .container .providers-content .clients-logos button:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.providers-section .container .providers-content .clients-logos button:first-child {
+  left: -22px;
+}
+.providers-section .container .providers-content .clients-logos button:last-child {
+  right: -22px;
+}
+.providers-section .container .providers-content .clients-logos .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(25% - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.providers-section .container .providers-content .clients-logos .carousel::-webkit-scrollbar {
+  display: none;
+}
+.providers-section .container .providers-content .clients-logos .carousel.no-transition {
+  scroll-behavior: auto;
+}
+.providers-section .container .providers-content .clients-logos .carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.providers-section .container .providers-content .clients-logos .carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.providers-section .container .providers-content .clients-logos .carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.providers-section .container .providers-content .clients-logos .carousel .card {
+  scroll-snap-align: start;
+  height: 400px;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.09);
+  -webkit-backdrop-filter: blur(5px);
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  transition: 0.5s;
+  padding: 15px !important;
+  position: relative;
+}
+.providers-section .container .providers-content .clients-logos .carousel .card .contant-card {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  height: 45%;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 15px 15px 5px 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 0 !important;
+  flex-direction: column;
+}
+.providers-section .container .providers-content .clients-logos .carousel .card .contant-card a {
+  margin-top: 10px;
+  padding: 8px 20px !important;
+  border: none;
+  cursor: pointer;
+  background-color: #f56224;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.providers-section .container .providers-content .clients-logos .card .img {
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to right, rgba(245, 99, 36, 0.8196078431), rgba(245, 99, 36, 0.5882352941));
+  border-radius: 15px;
+}
+.providers-section .container .providers-content .clients-logos .card .img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.providers-section .container .providers-content .clients-logos .carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  color: #fff;
+}
+.providers-section .container .providers-content .clients-logos .carousel .card p {
+  color: #b5b5b5;
+  font-size: 15px;
+  width: 80%;
+  text-align: center;
+}
+.providers-section .container .providers-content .clients-logos .carousel .card:hover {
+  scale: 1.01;
+  transition: 0.5s;
+}
+.providers-section .container .contact-section {
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 2%;
+  /* From Uiverse.io by StefanR1901 */
+}
+.providers-section .container .contact-section .colorful-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px !important;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  position: relative;
+  position: fixed;
+  right: -10%;
+  left: 120%;
+  transition: 0.5s ease-in-out;
+  bottom: 5%;
+  top: 30%;
+  z-index: 150;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.providers-section .container .contact-section .colorful-form span {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  top: 5%;
+  left: 85%;
+  cursor: pointer;
+}
+.providers-section .container .contact-section .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.providers-section .container .contact-section .form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.providers-section .container .contact-section .form-input {
+  width: 100%;
+  padding: 10px !important;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7490196078);
+  color: #333;
+  border-radius: 5px;
+}
+.providers-section .container .contact-section textarea.form-input {
+  height: 100px;
+}
+.providers-section .container .contact-section .form-button {
+  display: block;
+  width: 100%;
+  padding: 10px !important;
+  background: linear-gradient(to right, rgba(245, 99, 36, 0.8196078431), rgba(245, 99, 36, 0.5882352941));
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.providers-section .container .contact-section .form-button:hover {
+  background-color: #ff5f59;
+}
+.providers-section .container .contact-section .Btn {
+  width: 180px;
+  height: 45px;
+  border-radius: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(to right, #f56224, rgba(245, 99, 36, 0.5882352941));
+  transition-duration: 0.3s;
+  letter-spacing: 1.4px;
+}
+.providers-section .container .contact-section .svgIcon path {
+  fill: white;
+}
+.providers-section .container .contact-section .Btn:hover {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}
+.providers-section .container .contact-section .Btn::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 30%;
+  background: linear-gradient(to right, #f56224, rgba(232, 80, 14, 0.7764705882));
+  filter: blur(10px);
+  bottom: -3px;
+  z-index: -1;
+  transition-duration: 0.3s;
+}
+.providers-section .container .contact-section .Btn:hover::before {
+  bottom: -1px;
+  filter: blur(5px);
+  transition-duration: 0.3s;
+}
+
+footer {
+  width: 100%;
+  height: 70vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .content {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .content h2 {
+  font-size: 16px;
+  color: #fff;
+}
+footer .container {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer .container .card {
+  height: 90%;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px !important;
+  gap: 30px;
+}
+footer .container .card h2 {
+  font-size: 20px;
+  color: #fff;
+}
+footer .container .card ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 15px;
+}
+footer .container .card ul a {
+  color: #e1e0e0;
+  font-size: 15px;
+  text-decoration: none;
+}
+footer .container .card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 15px;
+}
+footer .container .card .content p {
+  color: #e1e0e0;
+  font-size: 15px;
+  text-align: start;
+}
+footer .container .card .content p span {
+  padding: 0 16px !important;
+}
+footer .container .card .main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 9px;
+}
+footer .container .card .main .card {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+footer .container .card .main {
+  /* for all social containers*/
+}
+footer .container .card .main .socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+footer .container .card .main {
+  /* instagram*/
+}
+footer .container .card .main .containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+footer .container .card .main {
+  /* twitter*/
+}
+footer .container .card .main .containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+footer .container .card .main {
+  /* linkdin*/
+}
+footer .container .card .main .containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+footer .container .card .main {
+  /* Whatsapp*/
+}
+footer .container .card .main .containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+footer .container .card .main .socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+footer .container .card .main .socialSvg {
+  width: 17px;
+}
+footer .container .card .main .socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+footer .container .card .main .socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1289px) {
+  .about-section {
+    height: auto;
+  }
+  .about-section .container .about-content {
+    height: auto !important;
+    padding: 25px 0 !important;
+  }
+  .about-section .container .box-img {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    place-items: center;
+  }
+  .about-section .container .box-img .about-img {
+    width: 550px;
+  }
+}
+@media (max-width: 1121px) {
+  header .logo {
+    display: flex;
+    justify-content: center;
+  }
+  .about-section .box-img {
+    gap: 15px;
+  }
+  .about-section .box-img .about-img {
+    height: 500px !important;
+    width: 100% !important;
+  }
+  .services-section {
+    height: auto !important;
+  }
+  .services-section .container .our-services {
+    height: 100px !important;
+  }
+  .services-section .container .services-content {
+    display: flex !important;
+    width: 100%;
+  }
+  .services-section .container .services-content .cards-services {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    place-items: center;
+  }
+  .services-section .container .services-content .card {
+    height: 430px !important;
+  }
+  footer {
+    height: auto;
+    display: flex;
+    gap: 30px;
+  }
+  footer .card {
+    height: 300px !important;
+  }
+  footer .card .main {
+    height: 50% !important;
+  }
+}
+@media (max-width: 900px) {
+  header .logo {
+    width: 50%;
+  }
+  header .logo img {
+    width: 95%;
+  }
+  header nav {
+    width: auto !important;
+    display: none;
+    position: fixed;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.285);
+    top: 11.8%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 !important;
+  }
+  header button {
+    display: flex;
+    margin: 0 40px !important;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .clients-section {
+    height: auto;
+  }
+  .clients-section .content {
+    height: 150px !important;
+  }
+  .clients-section .carousel {
+    grid-auto-columns: calc(50% - 9px) !important;
+  }
+  .providers-section .carousel {
+    grid-auto-columns: calc(33.3333333333% - 9px) !important;
+  }
+}
+@media (max-width: 790px) {
+  .hero-slider .container .content {
+    left: 30px !important;
+  }
+}
+@media (max-width: 699px) {
+  .providers-section {
+    height: auto;
+    padding-bottom: 30px !important;
+  }
+  .providers-section .content {
+    height: 150px !important;
+  }
+  .providers-section .providers-content {
+    padding-bottom: 80px !important;
+  }
+  .providers-section .carousel {
+    grid-auto-columns: calc(50% - 9px) !important;
+  }
+  .providers-section .carousel .card img {
+    height: 90% !important;
+  }
+}
+@media (max-width: 546px) {
+  header .logo {
+    width: 70% !important;
+  }
+  .hero-slider {
+    height: 85vh;
+  }
+  .hero-slider .container .content {
+    left: 30px !important;
+    gap: 0px !important;
+    width: 200px !important;
+    height: 210px !important;
+  }
+  .hero-slider .container .content h1 {
+    font-size: 30px !important;
+  }
+  .hero-slider .container .content p {
+    font-size: 14px !important;
+  }
+  footer {
+    padding-bottom: 20px !important;
+  }
+  footer .card {
+    width: 90% !important;
+  }
+  .about-section .container {
+    width: 95% !important;
+  }
+  .about-section .container .about-content {
+    gap: 15px;
+  }
+  .about-section .container .about-content h2 {
+    font-size: 25px;
+  }
+  .about-section .container .about-content p {
+    font-size: 12px;
+  }
+  .about-section .box-img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: auto !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 15px;
+    width: 100% !important;
+  }
+  .about-section .box-img img {
+    width: 100%;
+  }
+  .services-section .cards-services {
+    display: flex !important;
+  }
+  .clients-section .clients-logos .carousel {
+    grid-auto-columns: calc(100% - 9px) !important;
+  }
+  .providers-section .carousel {
+    grid-auto-columns: calc(100% - 9px) !important;
+  }
+  .providers-section .carousel .card img {
+    height: 90% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

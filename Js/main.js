@@ -2,7 +2,7 @@ let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
 let slide = document.querySelector(".slide");
 
-let intervalTime = 8000;
+let intervalTime = 6000;
 let interval;
 
 // Here is Related to Auto Slide

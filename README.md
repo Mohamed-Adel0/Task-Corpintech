@@ -32,30 +32,7 @@ Live Demo: https://task-corpintech.vercel.app/
 
 No frameworks or libraries were used pure front-end
 
----
-## 🗂 Project Structure
 
-project-root/
-│
-├── index.html
-│
-├── Picture/
-│   ├── images/
-│   ├── Videos/
-│
-├── css/
-│   └── style.css
-│
-├── sass/
-│   ├── style.scss
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   └── _layout.scss
-│
-├── js/
-│   └── main.js
-│
-└── README.md
 
 
 

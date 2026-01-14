@@ -37,21 +37,25 @@ No frameworks or libraries were used pure front-end
 
 ## 🗂 Project Structure
 
+project-root/
 │
-├── index.html # Main landing page
+├── index.html
 │
-├── css/ # Styles~Scss
-│ └── style.scss # scss compiled styles
+├── Picture/
+│   ├── images/
+│   ├── Videos/
+│
+├── css/
+│   └── style.css
+│
+├── sass/
+│   ├── style.scss
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── _layout.scss
 │
 ├── js/
-│ └── main.js # JavaScript interactions
+│   └── main.js
 │
-├── Pictures/
-│ ├── images/ # All project images
-│ └── videos/ # (Optional) videos used
-│
-├── README.md # This file
-└── screenshot.png # Screenshot shown above
+└── README.md
 
-
----

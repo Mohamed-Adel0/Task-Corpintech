@@ -22,19 +22,6 @@ The page includes:
 
 Live Demo: https://task-corpintech.vercel.app/
 
----
-
-## 🛠 Tools & Technologies
-
-- **HTML5** – for structure  
-- **CSS3** (could be improved using Sass / SCSS) – for layout and design  
-- **JavaScript (Vanilla JS)** – for interaction and slider behavior  
-- Responsive design for different screen sizes
-
-No frameworks or libraries were used pure front-end
-
----
-
 ## 🗂 Project Structure
 
 project-root/
@@ -58,4 +45,19 @@ project-root/
 │   └── main.js
 │
 └── README.md
+
+
+---
+
+## 🛠 Tools & Technologies
+
+- **HTML5** – for structure  
+- **CSS3** (could be improved using Sass / SCSS) – for layout and design  
+- **JavaScript (Vanilla JS)** – for interaction and slider behavior  
+- Responsive design for different screen sizes
+
+No frameworks or libraries were used pure front-end
+
+---
+
 
